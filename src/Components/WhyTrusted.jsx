@@ -27,7 +27,7 @@ const WhyTrusted = ({ id }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="text-center max-w-6xl mx-auto mb-12"
+            className="text-center max-w-4xl mx-auto mb-12"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               Why we are{" "}
@@ -53,7 +53,7 @@ const WhyTrusted = ({ id }) => {
             <img
               src={GradientDesign}
               alt="Decorative gradient"
-              className="absolute bottom-[-20px] left-1/2 -translate-x-1/2 lg:w-[130%] xl:w-[80%] z-0 xl:opacity-70"
+              className="absolute bottom-[-20px] left-1/2 -translate-x-1/2 lg:w-[130%] xl:w-[80%] z-0 xl:opacity-80"
               loading="lazy"
             />
 
@@ -65,7 +65,7 @@ const WhyTrusted = ({ id }) => {
               transition={{ duration: 1, delay: 0.3 }}
               src={TrustedImage}
               alt="Group of professionals collaborating"
-              className="w-full rounded-xl shadow-xl relative z-10 max-w-6xl mx-auto"
+              className="w-full rounded-xl shadow-xl relative z-10 max-w-4xl mx-auto"
               loading="lazy"
             />
           </div>

@@ -81,7 +81,7 @@ const Offerings = ({ id }) => {
     <div className="relative">
       {/* Main Content */}
       <SectionWrapper id={id}>
-        <div ref={sectionRef} className="text-center max-w-6xl mx-auto">
+        <div ref={sectionRef} className="text-center max-w-4xl mx-auto">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -110,7 +110,7 @@ const Offerings = ({ id }) => {
           </motion.div>
 
           {/* Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-8">
             {[0, 1, 2].map((columnIndex) => (
               <div
                 key={`column-${columnIndex}`}

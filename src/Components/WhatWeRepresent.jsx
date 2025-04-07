@@ -7,7 +7,7 @@ import CornerGradient from "../assets/GradientDesign.svg";
 
 const WhatWeRepresent = ({ id }) => {
   return (
-    <div className="relative max-w-6xl mx-auto">
+    <div className="relative max-w-4xl mx-auto">
       {/* Main Content */}
       <SectionWrapper id={id}>
         <div className="text-center">
@@ -24,7 +24,7 @@ const WhatWeRepresent = ({ id }) => {
               Our relentless pursuit of excellence is the driving force behind
               our success
             </h3>
-            <p className="text-xl mb-12 max-w-6xl mx-auto text-[#D2D2D2]">
+            <p className="text-xl mb-12 max-w-4xl mx-auto text-[#D2D2D2]">
               Excellence isn’t a goal, it’s our DNA; our relentless pursuit of
               excellence is the driving force behind our success. Excellence,
               legacy, and we are proud to carry it forward. Watch the video to

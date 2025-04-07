@@ -6,11 +6,12 @@ import WhyTrusted from './Components/WhyTrusted';
 import Offerings from './Components/Offerings';
 import WhatWeRepresent from './Components/WhatWeRepresent';
 import ComplianceCertifications from './Components/ComplianceCertifications';
-import OurProcess from './Components/OurProcess';
+import TheyTrust from './Components/TheyTrust';
 import OurPartners from './Components/OurPartners';
 import ReadyToGetStarted from './Components/ReadyToGetStarted';
 import Footer from './Components/Footer';
 import SharedBackgroundWrapper from './Components/reusable/ShareBackgroundWrapper';
+import OurProcess from './Components/OurProcess';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Offerings id="services" />
       <WhatWeRepresent />
       <ComplianceCertifications />
+      <TheyTrust />
       <OurProcess />
       <OurPartners />
       <ReadyToGetStarted id="contact" />

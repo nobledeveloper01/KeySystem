@@ -16,7 +16,7 @@ const Hero = ({ id }) => {
       />
 
       <SectionWrapper id={id} className="relative z-10">
-        <div className="flex flex-col items-center max-w-6xl mx-auto">
+        <div className="flex flex-col items-center max-w-4xl mx-auto">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -40,7 +40,7 @@ const Hero = ({ id }) => {
           </motion.div>
 
           {/* Image */}
-          <div className="relative w-full max-w-6xl z-10">
+          <div className="relative w-full max-w-4xl z-10">
             <motion.img
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
