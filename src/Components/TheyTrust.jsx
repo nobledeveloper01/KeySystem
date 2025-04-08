@@ -12,7 +12,7 @@ import MilitaryPensions from "../assets/TrustedMillitary.png";
 import StanbicBank from "../assets/TrustedStanbic.png";
 import BankMuscat from "../assets/TrustedBankmus.png";
 import BankOfSomalia from "../assets/Banadda.png";
-import Santander from "../assets/Santander.png";
+import Santander from "../assets/santander.png";
 
 const TheyTrust = ({ id }) => {
   // First two rows (4 partners per row)
