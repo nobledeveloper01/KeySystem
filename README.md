@@ -77,7 +77,7 @@ npm run preview
 
 ## Contact
 
-For any questions or feedback, please reach out to [your-email@example.com].
+For any questions or feedback, please reach out to [nobleconcepts22@gmail.com].
 
 ---
 
