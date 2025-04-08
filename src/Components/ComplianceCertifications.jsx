@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SectionWrapper from "./reusable/SectionWrapper";
-import Button from "./reusable/Button"; // Adjust the path to your Button component
+import Button from "./reusable/Button";
+import { Link } from "react-scroll";  // Importing Link from react-scroll
 
 // Import certification logos (adjust paths as necessary)
 import PciDss from "../assets/certifications/pci-dss.svg";
@@ -46,7 +47,7 @@ const certifications = [
 
 const ComplianceCertifications = ({ id }) => {
   return (
-    <div className="relative ">
+    <div className="relative">
       {/* Main Content */}
       <SectionWrapper id={id}>
         <div className="text-center">
@@ -71,7 +72,9 @@ const ComplianceCertifications = ({ id }) => {
               transition={{ duration: 1, delay: 0.2 }}
               className="mx-auto flex justify-center"
             >
-              <Button text="Contact Us" variant="" />
+              <Link to="contact" smooth duration={500}>  {/* Add the smooth scroll behavior */}
+                <Button text="Contact Us" variant="" />
+              </Link>
             </motion.div>
           </motion.div>
 
@@ -88,14 +91,17 @@ const ComplianceCertifications = ({ id }) => {
                   key={index}
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.6 + index * 0.1, // Stagger the animation for each certification
+                  }}
                   className="flex justify-center items-center"
                 >
                   <img
                     src={cert.src}
                     alt={cert.alt}
                     className="w-full h-24 object-contain"
-                    loading="lazy"
+                    loading="lazy" // Lazy load images for performance
                   />
                 </motion.div>
               ))}

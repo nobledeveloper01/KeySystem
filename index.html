@@ -1,13 +1,105 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>KeySystem – Digital Banking & Cybersecurity Solutions</title>
+    <meta
+      name="description"
+      content="KeySystem offers secure, scalable software solutions for banking, fintech, cybersecurity, and business intelligence. Empower your digital transformation today."
+    />
+    <meta
+      name="keywords"
+      content="KeySystem, Digital Banking, Cybersecurity, Core Banking, Fintech Solutions, Business Intelligence, Internal Audit, Software Testing"
+    />
+    <meta name="author" content="KeySystem Solutions" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.keysystem.com/" />
+    <meta
+      property="og:title"
+      content="KeySystem – Digital Banking & Cybersecurity Solutions"
+    />
+    <meta
+      property="og:description"
+      content="Secure, scalable software solutions for financial institutions, enterprises, and digital-first businesses."
+    />
+    <meta
+      property="og:image"
+      content="https://www.keysystem.com/preview.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.keysystem.com/" />
+    <meta
+      property="twitter:title"
+      content="KeySystem – Digital Banking & Cybersecurity Solutions"
+    />
+    <meta
+      property="twitter:description"
+      content="Secure, scalable software solutions for financial institutions, enterprises, and digital-first businesses."
+    />
+    <meta
+      property="twitter:image"
+      content="https://www.keysystem.com/preview.jpg"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/Logo.svg" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.keysystem.com/" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0c0c0f" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-XXXXXX');
+    </script>
   </head>
+
   <body>
+    <!-- Google Tag Manager (noscript fallback) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+        title="Google Tag Manager"
+      ></iframe>
+    </noscript>
+
     <div id="root"></div>
+
+    <!-- Main App -->
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Google Analytics -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-XXXXXX-X');
+    </script>
   </body>
 </html>

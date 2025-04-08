@@ -35,7 +35,7 @@ const OurProcess = ({ id }) => {
     <div className="relative bg-black min-h-screen py-16">
       {/* Main Content */}
       <SectionWrapper id={id}>
-        <div className="text-center w-full mx-auto ">
+        <div className="text-center w-full mx-auto">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -65,9 +65,7 @@ const OurProcess = ({ id }) => {
                   <h4 className="text-2xl font-bold mb-4 text-white group-hover:text-[#4A90E2] transition-colors duration-300">
                     {processes[0].title}
                   </h4>
-                  <p className="text-lg text-white">
-                    {processes[0].description}
-                  </p>
+                  <p className="text-lg text-white">{processes[0].description}</p>
                 </div>
                 <div className="md:w-full flex justify-end md:bottom-[-70px] lg:bottom-[-5px] right-0 relative mt-6 md:mt-0">
                   <div className="relative transition-all duration-500 ease-in-out hover:transform hover:translate-y-[-5px]">
@@ -106,9 +104,7 @@ const OurProcess = ({ id }) => {
                     <h4 className="text-2xl font-bold mb-4 text-white hover:text-[#4A90E2] transition-colors duration-300">
                       {processes[1].title}
                     </h4>
-                    <p className="text-lg text-white">
-                      {processes[1].description}
-                    </p>
+                    <p className="text-lg text-white">{processes[1].description}</p>
                   </div>
                   <div className="md:w-full flex justify-end">
                     <div className="relative transition-all duration-500 ease-in-out">
@@ -142,9 +138,7 @@ const OurProcess = ({ id }) => {
                     <h4 className="text-2xl font-bold mb-4 text-white hover:text-[#4A90E2] transition-colors duration-300">
                       {processes[2].title}
                     </h4>
-                    <p className="text-lg text-white">
-                      {processes[2].description}
-                    </p>
+                    <p className="text-lg text-white">{processes[2].description}</p>
                   </div>
                   <div className="md:w-full flex justify-end bottom-[-5px] right-0">
                     <div className="relative transition-all duration-500 ease-in-out">

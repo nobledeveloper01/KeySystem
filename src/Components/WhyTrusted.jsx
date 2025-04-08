@@ -7,14 +7,14 @@ import TrustedImage from "../assets/TrustedImage.png";
 
 const WhyTrusted = ({ id }) => {
   return (
-    <div className="relative  text-white overflow-hidden">
+    <div className="relative text-white overflow-hidden">
       {/* Line Background Pattern */}
       <div className="absolute inset-0 z-0">
         <img
           src={LineDesign}
           alt="Background pattern"
           className="w-full h-full object-cover opacity-60"
-          loading="lazy"
+          loading="lazy" // Lazy load for performance improvement
         />
       </div>
 
@@ -23,10 +23,10 @@ const WhyTrusted = ({ id }) => {
         <div className="flex flex-col items-center">
           {/* Text Content */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
+            initial={{ opacity: 0, y: 50 }} // Initial animation state: invisible and slightly offset
+            whileInView={{ opacity: 1, y: 0 }} // Final animation state: fully visible and in place
+            viewport={{ once: true }} // Triggers animation once when the element comes into view
+            transition={{ duration: 1 }} // Duration of animation
             className="text-center max-w-4xl mx-auto mb-12"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
@@ -48,25 +48,25 @@ const WhyTrusted = ({ id }) => {
           </motion.div>
 
           {/* Image + Wider Gradient */}
-          <div className="relative w-full  mx-auto">
+          <div className="relative w-full mx-auto">
             {/* Wider Gradient behind image */}
             <img
               src={GradientDesign}
               alt="Decorative gradient"
               className="absolute bottom-[-20px] left-1/2 -translate-x-1/2 lg:w-[130%] xl:w-[80%] z-0 xl:opacity-80"
-              loading="lazy"
+              loading="lazy" // Lazy load for performance improvement
             />
 
             {/* Image above gradient */}
             <motion.img
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 0.3 }}
+              initial={{ opacity: 0, scale: 0.95 }} // Initial animation state: invisible and slightly scaled down
+              whileInView={{ opacity: 1, scale: 1 }} // Final animation state: fully visible and normal size
+              viewport={{ once: true }} // Triggers animation once when the element comes into view
+              transition={{ duration: 1, delay: 0.3 }} // Duration of animation with delay
               src={TrustedImage}
               alt="Group of professionals collaborating"
               className="w-full rounded-xl shadow-xl relative z-10 max-w-4xl mx-auto"
-              loading="lazy"
+              loading="lazy" // Lazy load for performance improvement
             />
           </div>
         </div>

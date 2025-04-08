@@ -12,13 +12,14 @@ import ReadyToGetStarted from './Components/ReadyToGetStarted';
 import Footer from './Components/Footer';
 import SharedBackgroundWrapper from './Components/reusable/ShareBackgroundWrapper';
 import OurProcess from './Components/OurProcess';
+import ScrollToTop from './Components/reusable/ScrollToTop';
 
 function App() {
   return (
     <div className="min-h-screen bg-[#020412] text-white font-Poppins">
       <SharedBackgroundWrapper>
-      <Navbar />
-      <Hero id="home" />
+        <Navbar />
+        <Hero id="home" />
       </SharedBackgroundWrapper>
       <TrustedBy />
       <WhyTrusted id="about" />
@@ -30,6 +31,7 @@ function App() {
       <OurPartners />
       <ReadyToGetStarted id="contact" />
       <Footer />
+      <ScrollToTop /> {/* Add the ScrollToTop component */}
     </div>
   );
 }

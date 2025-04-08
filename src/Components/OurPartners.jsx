@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import SectionWrapper from "./reusable/SectionWrapper";
 
-// Import partner logos (adjust paths as necessary)
+// Import partner logos
 import SoftwareGroup from "../assets/partners/software-group.svg";
 import Cognizant from "../assets/partners/cognizant.svg";
 import Temenos from "../assets/partners/temenos.svg";
@@ -32,7 +32,7 @@ const OurPartners = ({ id }) => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 uppercase">
               Our Partners
             </h2>
-            <h3 className="text-xl  font-normal mb-12 text-[#D2D2D2]">
+            <h3 className="text-xl font-normal mb-12 text-[#D2D2D2]">
               Creating a synergy with global brands
             </h3>
           </motion.div>
@@ -42,7 +42,7 @@ const OurPartners = ({ id }) => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className=" p-6 rounded-lg w-full"
+            className="p-6 rounded-lg w-full"
           >
             <div className="flex flex-wrap justify-center gap-6 w-full">
               {partners.map((partner, index) => (

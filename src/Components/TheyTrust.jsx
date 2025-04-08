@@ -60,20 +60,20 @@ const TheyTrust = ({ id }) => {
             transition={{ duration: 1, delay: 0.2 }}
             className="max-w-4xl mx-auto"
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {topPartners.map((partner, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                  className=" rounded-lg shadow-lg hover:scale-105 transition-all duration-300 flex justify-center items-center mx-auto "
+                  className="rounded-lg shadow-lg hover:scale-105 transition-all duration-300 flex justify-center items-center mx-auto"
                 >
                   <img
                     src={partner.src}
                     alt={partner.alt}
                     className="w-full h-24 object-contain"
-                    loading="lazy"
+                    loading="lazy" // Lazy load images for performance
                   />
                 </motion.div>
               ))}
@@ -91,13 +91,13 @@ const TheyTrust = ({ id }) => {
                       duration: 0.5,
                       delay: 0.4 + (index + topPartners.length) * 0.1,
                     }}
-                    className="lg:py-4 pt-4 lg:pt-0 rounded-lg shadow-lg hover:scale-105 transition-all duration-300 flex justify-center items-center mx-auto "
+                    className="lg:py-4 pt-4 lg:pt-0 rounded-lg shadow-lg hover:scale-105 transition-all duration-300 flex justify-center items-center mx-auto"
                   >
                     <img
                       src={partner.src}
                       alt={partner.alt}
                       className="w-full h-24 object-contain"
-                      loading="lazy"
+                      loading="lazy" // Lazy load images for performance
                     />
                   </motion.div>
                 ))}

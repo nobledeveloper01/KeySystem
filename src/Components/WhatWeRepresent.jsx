@@ -13,9 +13,9 @@ const WhatWeRepresent = ({ id }) => {
         <div className="text-center">
           {/* Text Content */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
+            initial={{ opacity: 0, scale: 0.95 }} // Initial animation state
+            animate={{ opacity: 1, scale: 1 }} // Final animation state
+            transition={{ duration: 1 }} // Transition duration
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               What we Represent
@@ -37,9 +37,9 @@ const WhatWeRepresent = ({ id }) => {
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Our Vision */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
+              initial={{ opacity: 0, scale: 0.95 }} // Initial animation state
+              animate={{ opacity: 1, scale: 1 }} // Final animation state
+              transition={{ duration: 1, delay: 0.2 }} // Delay added for staggered effect
               className="relative flex-1 p-6 rounded-lg shadow-lg border-t border-b border-[#4A90E2] hover:border hover:border-[#4A90E2] transition-all duration-300"
             >
               {/* Gradient SVG in top-right */}
@@ -47,12 +47,13 @@ const WhatWeRepresent = ({ id }) => {
                 src={CornerGradient}
                 alt="Corner gradient decoration"
                 className="absolute top-0 w-[350px] right-0"
+                loading="lazy" // Lazy loading for performance
               />
               <img
                 src={VisionImage}
                 alt="Target with arrow representing our vision"
                 className="w-72 h-72 mx-auto mb-4"
-                loading="lazy"
+                loading="lazy" // Lazy loading for performance
               />
               <h4 className="text-2xl font-bold mb-4 text-left">Our Vision</h4>
               <p className="text-lg text-left">
@@ -64,9 +65,9 @@ const WhatWeRepresent = ({ id }) => {
 
             {/* Our Mission */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.4 }}
+              initial={{ opacity: 0, scale: 0.95 }} // Initial animation state
+              animate={{ opacity: 1, scale: 1 }} // Final animation state
+              transition={{ duration: 1, delay: 0.4 }} // Delay added for staggered effect
               className="relative flex-1 p-6 rounded-lg shadow-lg border-t border-b border-[#4A90E2] hover:border hover:border-[#4A90E2] transition-all duration-300"
             >
               {/* Gradient SVG in top-right */}
@@ -74,12 +75,13 @@ const WhatWeRepresent = ({ id }) => {
                 src={CornerGradient}
                 alt="Corner gradient decoration"
                 className="absolute top-0 w-[350px] right-0"
+                loading="lazy" // Lazy loading for performance
               />
               <img
                 src={MissionImage}
                 alt="Magnifying glass representing our mission"
                 className="w-72 h-72 mx-auto mb-4"
-                loading="lazy"
+                loading="lazy" // Lazy loading for performance
               />
               <h4 className="text-2xl font-bold mb-4 text-left">Our Mission</h4>
               <p className="text-lg text-left">

@@ -171,6 +171,7 @@ const Footer = React.memo(() => {
           </div>
           <div className="sm:w-1/2 lg:w-[200px]">
             <p className="font-semibold text-white">Email</p>
+            {/* Using motion.a for hover effects */}
             <motion.a
               href="mailto:enquiries@keysystemtlc.com"
               className="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500"
