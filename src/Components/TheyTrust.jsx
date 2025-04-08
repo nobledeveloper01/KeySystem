@@ -1,18 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SectionWrapper from "./reusable/SectionWrapper";
-// Import partner logos (adjust paths as necessary)
-import Lapo from "../assets/Lapo.png";
-import Npf from "../assets/Npf.png";
+import Lapo from "../assets/Lapo.webp";
+import Npf from "../assets/Npf.webp";
 import Sterling from "../assets/TrustedSterling.png";
 import CrusaderSterling from "../assets/TrustedCSterling.png";
 import Nafc from "../assets/TrustedNAFC.png";
 import Nbf from "../assets/Trustednbf.png";
 import MilitaryPensions from "../assets/TrustedMillitary.png";
 import StanbicBank from "../assets/TrustedStanbic.png";
-import BankMuscat from "../assets/TrustedBankmus.png";
-import BankOfSomalia from "../assets/Banadda.png";
-import Santander from "../assets/santander.png";
+import BankMuscat from "../assets/TrustedBankmus.webp";
+import BankOfSomalia from "../assets/Banadda.webp";
+import Santander from "../assets/santander.webp";
 
 const TheyTrust = ({ id }) => {
   // First two rows (4 partners per row)

@@ -6,7 +6,7 @@ import TrustedCNAFC from "../assets/TrustedNAFC.png";
 import Trustednbf from "../assets/Trustednbf.png";
 import TrustedMillitary from "../assets/TrustedMillitary.png";
 import TrustedStanbic from "../assets/TrustedStanbic.png";
-import TrustedBankMUS from "../assets/TrustedBankmus.png";
+import TrustedBankMUS from "../assets/TrustedBankmus.webp";
 
 const TrustedBy = () => {
   const logos = [
