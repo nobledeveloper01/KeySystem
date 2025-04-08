@@ -54,25 +54,38 @@ const ComplianceCertifications = ({ id }) => {
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }} // Trigger animation only once when the component comes into view
             transition={{ duration: 1 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 uppercase">
+            <motion.h2
+              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 uppercase"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
               Compliance Certifications/
               <br />
               Standards We Specialize In
-            </h2>
-            <h3 className="text-xl md:text-xl lg:text-xl font-medium mb-6 text-[#D2D2D2]">
+            </motion.h2>
+
+            <motion.h3
+              className="text-xl md:text-xl lg:text-xl font-medium mb-6 text-[#D2D2D2]"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
               Elevate Your Organization’s Security Posture with Our <br />
               Compliance/Standards Consulting Services
-            </h3>
+            </motion.h3>
+
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
+              transition={{ duration: 1, delay: 0.4 }}
               className="mx-auto flex justify-center"
             >
-              <Link to="contact" smooth duration={500}>  {/* Add the smooth scroll behavior */}
+              <Link to="contact" smooth duration={500}>  
                 <Button text="Contact Us" variant="" />
               </Link>
             </motion.div>
@@ -81,8 +94,9 @@ const ComplianceCertifications = ({ id }) => {
           {/* Certifications Grid */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.4 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }} // Trigger animation only once when the component comes into view
+            transition={{ duration: 1, delay: 0.6 }}
             className="bg-white p-6 rounded-lg mt-12 max-w-4xl mx-auto"
           >
             <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -90,7 +104,8 @@ const ComplianceCertifications = ({ id }) => {
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  whileInView={{ opacity: 1, scale: 1 }} // Trigger animation on viewport entry
+                  viewport={{ once: true }} // Trigger animation once
                   transition={{
                     duration: 0.5,
                     delay: 0.6 + index * 0.1, // Stagger the animation for each certification

@@ -39,15 +39,27 @@ const OurProcess = ({ id }) => {
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 uppercase text-white">
+            <motion.h2
+              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 uppercase text-white"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
               Our Process
-            </h2>
-            <h3 className="text-xl font-normal mb-16 text-[#D2D2D2]">
+            </motion.h2>
+
+            <motion.h3
+              className="text-xl font-normal mb-16 text-[#D2D2D2]"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
               At KeySystem, we leave you with a lasting impression
-            </h3>
+            </motion.h3>
           </motion.div>
 
           {/* Cards */}
@@ -55,7 +67,8 @@ const OurProcess = ({ id }) => {
             {/* Top Card (Strategic Consultation) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="bg-[#121831] hover:bg-[#1A2340] transition-colors duration-300 ease-in-out rounded-lg overflow-hidden cursor-pointer shadow-lg hover:shadow-xl"
@@ -94,7 +107,8 @@ const OurProcess = ({ id }) => {
               {/* Collaboration Card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="bg-[#121831] hover:bg-[#1A2340] transition-colors duration-300 ease-in-out rounded-lg overflow-hidden cursor-pointer shadow-lg hover:shadow-xl"
@@ -128,7 +142,8 @@ const OurProcess = ({ id }) => {
               {/* Delivery Card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="bg-[#121831] hover:bg-[#1A2340] transition-colors duration-300 ease-in-out rounded-lg overflow-hidden cursor-pointer shadow-lg hover:shadow-xl"

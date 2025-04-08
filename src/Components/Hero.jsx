@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import SectionWrapper from "./reusable/SectionWrapper";
 import Button from "./reusable/Button";
 import StrokeDesign from "../assets/StrokDesign.svg";
 import HeroImage from "../assets/HeroImage.png";
 
+// Typing animation component
+const TypingEffect = ({ text, speed = 150 }) => {
+  const [displayedText, setDisplayedText] = useState("");
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (index < text.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText((prev) => prev + text.charAt(index)); // Add one character at a time
+        setIndex((prevIndex) => prevIndex + 1); // Move to next character
+      }, speed);
+      return () => clearTimeout(timeout);
+    }
+  }, [index, text, speed]);
+
+  return <span>{displayedText}</span>;
+};
+
 const Hero = ({ id }) => {
+  const typingText = "Forward-thinking Businesses"; // Store the typing text here
+
   return (
     <div className="relative overflow-hidden">
       {/* Stroke Design as background, placed absolutely */}
@@ -25,15 +45,41 @@ const Hero = ({ id }) => {
             transition={{ duration: 1 }} // Smooth transition effect
             className="text-center mb-12"
           >
-            <p className="inline-block px-4 py-1 border border-white rounded-full text-white bg-[#2E6D9C] mb-6">
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="inline-block px-4 py-1 border border-white rounded-full text-white bg-[#2E6D9C] mb-6"
+            >
               Welcome to KeySystem
-            </p>
-            <h1 className="text-3xl md:text-4xl lg:text-8xl font-bold mb-4 leading-tight">
-              IT Consulting for Forward-thinking Businesses
-            </h1>
-            <p className="text-2xl mb-8">
+            </motion.p>
+
+            <motion.h1
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="text-3xl md:text-4xl lg:text-8xl font-bold mb-4 leading-tight"
+            >
+              IT Consulting for{" "}
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 2, delay: 1 }}
+                className="inline-block"
+              >
+                <TypingEffect text={typingText} />
+              </motion.span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 1.5 }}
+              className="text-2xl mb-8"
+            >
               Driving Digital Transformation, One Solution at a Time
-            </p>
+            </motion.p>
+
             {/* Buttons */}
             <div className="flex justify-center space-x-4">
               <Button text="Get Started" />
@@ -46,7 +92,11 @@ const Hero = ({ id }) => {
             <motion.img
               initial={{ opacity: 0, scale: 0.9 }} // Initial state: slightly scaled down and invisible
               animate={{ opacity: 1, scale: 1 }} // Final state: fully visible and in normal size
-              transition={{ duration: 1, delay: 0.5 }} // Smooth transition with slight delay for a staggered effect
+              transition={{
+                duration: 1,
+                delay: 0.5, 
+                ease: "easeInOut", 
+              }}
               src={HeroImage}
               alt="Business professional with data charts"
               className="w-full rounded-lg shadow-lg"

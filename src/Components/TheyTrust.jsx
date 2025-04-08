@@ -42,21 +42,34 @@ const TheyTrust = ({ id }) => {
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }} // Trigger animation only once when the component comes into view
             transition={{ duration: 1 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 uppercase">
+            <motion.h2
+              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 uppercase"
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
               They Trust Us
-            </h2>
-            <h3 className="text-xl md:text-xl lg:text-xl font-normal mb-12 text-[#D2D2D2]">
+            </motion.h2>
+
+            <motion.h3
+              className="text-xl md:text-xl lg:text-xl font-normal mb-12 text-[#D2D2D2]"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
               And so can you
-            </h3>
+            </motion.h3>
           </motion.div>
 
           {/* Partners Grid - Top 2 rows */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }} // Trigger animation only once when the component comes into view
             transition={{ duration: 1, delay: 0.2 }}
             className="max-w-4xl mx-auto"
           >
@@ -65,8 +78,12 @@ const TheyTrust = ({ id }) => {
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                  whileInView={{ opacity: 1, scale: 1 }} // Trigger animation on viewport entry
+                  viewport={{ once: true }} // Trigger animation once
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.4 + index * 0.1, // Stagger the animation for each partner
+                  }}
                   className="rounded-lg shadow-lg hover:scale-105 transition-all duration-300 flex justify-center items-center mx-auto"
                 >
                   <img
@@ -86,7 +103,8 @@ const TheyTrust = ({ id }) => {
                   <motion.div
                     key={`bottom-${index}`}
                     initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    whileInView={{ opacity: 1, scale: 1 }} // Trigger animation on viewport entry
+                    viewport={{ once: true }} // Trigger animation once
                     transition={{
                       duration: 0.5,
                       delay: 0.4 + (index + topPartners.length) * 0.1,

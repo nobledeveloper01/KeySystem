@@ -30,8 +30,13 @@ const WhyTrusted = ({ id }) => {
             className="text-center max-w-4xl mx-auto mb-12"
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              Why we are{" "}
-              <span className="text-white">your Trusted Consultant</span>
+              <motion.span
+                initial={{ opacity: 0, scale: 0.8 }} // Start with scale and opacity transition
+                animate={{ opacity: 1, scale: 1 }} // End with normal size and full opacity
+                transition={{ duration: 1 }} // Duration for the transition
+              >
+                Why we are your Trusted Consultant
+              </motion.span>
             </h2>
             <h3 className="text-md md:text-lg lg:text-xl text-[#D2D2D2] mb-6">
               Empowering Businesses with Cutting-edge Technology
@@ -59,9 +64,8 @@ const WhyTrusted = ({ id }) => {
 
             {/* Image above gradient */}
             <motion.img
-              initial={{ opacity: 0, scale: 0.95 }} // Initial animation state: invisible and slightly scaled down
-              whileInView={{ opacity: 1, scale: 1 }} // Final animation state: fully visible and normal size
-              viewport={{ once: true }} // Triggers animation once when the element comes into view
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.3 }} // Duration of animation with delay
               src={TrustedImage}
               alt="Group of professionals collaborating"
