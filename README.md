@@ -34,7 +34,7 @@ To start the development server and preview the project locally, use:
 ```bash
 npm run dev
 ```
-The app will be available at `http://localhost:3000` by default.
+The app will be available at `http://localhost:5173` by default but will change automatically if the port is been used
 
 ### 5. Build for Production
 If you're ready to deploy the app, build it with:
@@ -74,13 +74,10 @@ npm run preview
 - **User Authentication:** Adding authentication mechanisms to allow user login and personalization of content.
 - **Form Validation:** Adding validation for forms to improve the user experience and ensure data integrity.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
-For any questions or feedback, please reach out to [your-email@example.com].
+For any questions or feedback, please reach out to [nobleconcepts22@gmail.com].
 
 ---
 
@@ -140,6 +137,4 @@ Currently, two official plugins are available:
 ### Expanding the ESLint Configuration
 
 If you are developing a production application, we recommend using TypeScript and enabling type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-```
 
-This markdown structure is ready for a `README.md` file. You can copy and paste this into your `README.md` file for your project.
