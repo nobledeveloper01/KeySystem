@@ -74,9 +74,6 @@ npm run preview
 - **User Authentication:** Adding authentication mechanisms to allow user login and personalization of content.
 - **Form Validation:** Adding validation for forms to improve the user experience and ensure data integrity.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
