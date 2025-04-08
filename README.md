@@ -34,7 +34,7 @@ To start the development server and preview the project locally, use:
 ```bash
 npm run dev
 ```
-The app will be available at `http://localhost:3000` by default.
+The app will be available at `http://localhost:5173` by default but will change automatically if the port is been used
 
 ### 5. Build for Production
 If you're ready to deploy the app, build it with:
