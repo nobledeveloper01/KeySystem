@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import SectionWrapper from './reusable/SectionWrapper';
 import Button from './reusable/Button';
-import StrokeDesign from '../assets/Strokdesign.svg';
+import StrokeDesign from '../assets/StrokDesign.svg';
 import HeroImage from '../assets/HeroImage.png';
 
 const Hero = ({ id }) => {
