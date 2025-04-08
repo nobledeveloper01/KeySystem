@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import SectionWrapper from "./reusable/SectionWrapper";
 import LineDesign from "../assets/LineDesign.svg";
 import GradientDesign from "../assets/TrustedGradient.svg";
-import TrustedImage from "../assets/TrustedImage.png";
+import TrustedImage from "../assets/TrustedImage.webp";
 
 const WhyTrusted = ({ id }) => {
   return (
